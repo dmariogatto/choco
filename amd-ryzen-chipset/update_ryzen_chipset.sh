@@ -1,3 +1,5 @@
+#!/bin/bash
+
 MONTHS=(ZERO January February March April May June July August September October November December)
 
 baseDir=$1
