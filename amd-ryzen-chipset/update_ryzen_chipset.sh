@@ -50,3 +50,6 @@ sed -i "s#^Revision Number:.*#Revision Number: **$newVersion**#g" $nuspec
 sed -i "s#^Release Date:.*#Release Date: $day ${MONTHS[$month]} $year#g" $nuspec
 
 rm $fileName
+
+export OLD_CHIPSET_VER=$currentVersion
+export NEW_CHIPSET_VER=$newVersion
