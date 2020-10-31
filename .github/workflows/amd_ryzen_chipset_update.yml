@@ -40,19 +40,6 @@ jobs:
           newVersion=$(echo $newUrl | sed 's/.*software_\(.*\).exe.*/\1/')
           
           git commit -am "update ryzen chipset '$newVersion'"
+          git push
           
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: amd-ryzen-chipset-test
-          
-      - name: Initialize Pull Request
-        uses: gha-utilities/init-pull-request@v0.2.0
-        with:
-          verbose: true
-          pull_request_token: ${{ secrets.GITHUB_TOKEN }}
-          head: amd-ryzen-chipset-test
-          base: amd-ryzen-chipset
-          title: 'Update AMD Ryzen Chipset'
-          body: 'Why did why teach sand to think?'
+          gh pr create --base amd-ryzen-chipset --title "Update AMD Ryzen Chipset $newVersion" --body "Why did we teach sand to think?"
