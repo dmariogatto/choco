@@ -35,6 +35,8 @@ jobs:
             exit
           fi
           
+          gh auth login --with-token ${{ secrets.GITHUB_TOKEN }}
+          
           installScript="$GITHUB_WORKSPACE/amd-ryzen-chipset/tools/chocolateyinstall.ps1"
           newUrl=$(grep '$url =' $installScript | cut -d \' -f 2)
           newVersion=$(echo $newUrl | sed 's/.*software_\(.*\).exe.*/\1/')
@@ -42,5 +44,4 @@ jobs:
           git commit -am "update ryzen chipset '$newVersion'"
           git push
           
-          gh auth --with-token ${{ secrets.GITHUB_TOKEN }}
           gh pr create --base amd-ryzen-chipset --title "Update AMD Ryzen Chipset $newVersion" --body "Why did we teach sand to think?"
