@@ -35,7 +35,7 @@ jobs:
             exit
           fi
           
-          gh auth login --with-token ${{ secrets.GITHUB_TOKEN }}
+          gh auth login --with-token <<< ${{ secrets.GITHUB_TOKEN }}
           
           installScript="$GITHUB_WORKSPACE/amd-ryzen-chipset/tools/chocolateyinstall.ps1"
           newUrl=$(grep '$url =' $installScript | cut -d \' -f 2)
