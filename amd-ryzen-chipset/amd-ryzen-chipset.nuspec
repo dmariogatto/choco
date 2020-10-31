@@ -4,7 +4,7 @@
   <metadata>
     <id>amd-ryzen-chipset</id>
     <owners>dgatto</owners>
-    <version>2020.7.21</version>
+    <version>2020.10.19</version>
     <title>AMD Ryzen Chipset Drivers</title>
     <authors>Advanced Micro Devices Inc</authors>
     <licenseUrl>https://www.amd.com/en/support/eula</licenseUrl>
@@ -18,8 +18,8 @@
 AMD Ryzen™ chipset drivers for both socket AM4 and TR4.
     </summary>
     <description>
-Revision Number: __2.07.14.327__
-Release Date: 21 July 2020
+Revision Number: **2.10.13.408**
+Release Date: 19 October 2020
 
 Supports:
 
