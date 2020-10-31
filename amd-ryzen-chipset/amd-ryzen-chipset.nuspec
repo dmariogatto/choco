@@ -21,37 +21,33 @@ AMD Ryzen™ chipset drivers for both socket AM4 and TR4.
 Revision Number: **2.10.13.408**
 Release Date: 19 October 2020
 
-Supports:
-
-Windows® 7/10 for
-
-- 2nd Gen AMD Ryzen™ Desktop Processor
-- 7th-Gen AMD A-Series Processors
-- AMD Ryzen™ Desktop Processor
-- AMD X470 Chipset
-- AMD X370 Chipset
-- AMD B450 Chipset
-- AMD B350 Chipset
-- AMD A320 Chipset
-
-Windows® 10 only for
+**Supports:**
 
 - 3rd Gen AMD Ryzen™ Threadripper™ Processors
 - 3rd Gen AMD Ryzen™ Desktop Processor
 - 2nd Gen AMD Ryzen™ Threadripper™ Processor
+- 2nd Gen AMD Ryzen™ Desktop Processor
+- AMD Ryzen™ Desktop Processor
 - AMD Ryzen™ Threadripper™ Processor
 - AMD Ryzen™ Desktop Processor with Radeon™ Graphics
 - AMD Ryzen™ Mobile Processor with Radeon™ Graphics
+- 7th-Gen AMD A-Series Processors
+- AMD B350 Chipset
+- AMD A320 Chipset
+- AMD X370 Chipset
 - AMD X399 Chipset
+- AMD B450 Chipset
+- AMD X470 Chipset
 - AMD X570 Chipset
+- AMD B550 Chipset
 - AMD TRX40 Chipset
 
-Package Includes:
+**Package Includes:**
 
 - AMD Chipset Drivers
 - AMD Ryzen™ Power Plans (required for UEFI CPPC2 in Windows® 10 May 2019 Update)
     </description>
-    <releaseNotes>https://www.amd.com/en/support/kb/release-notes/rn-ryzen-chipset-2-07-14-327</releaseNotes>
+    <releaseNotes>https://www.amd.com/en/support/kb/release-notes/rn-ryzen-chipset-2-10-13-408</releaseNotes>
     <dependencies>
       <dependency id="vcredist2015" version="14.0.24212.0" />
       <dependency id="chocolatey-core.extension" version="1.1.0" />
