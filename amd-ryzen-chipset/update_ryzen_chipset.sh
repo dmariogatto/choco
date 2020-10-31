@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 MONTHS=(ZERO January February March April May June July August September October November December)
 
 baseDir=$1
@@ -15,9 +17,25 @@ echo "Current Version: $currentVersion"
 echo "Current Checksum: $currentChecksum"
 
 request=$(curl -s 'https://www.amd.com/en/support/chipsets/amd-socket-am4/b450' -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:82.0) Gecko/20100101 Firefox/82.0')
-newUrl=$(echo $request | lynx -stdin -dump |  grep -m 1 drivers.amd.com/drivers/amd_chipset_software_ | cut -d ' ' -f 3)
-newReleaseDate=$(echo $request | lynx -stdin -dump | grep -m 1 -A 1 'Release Date' | tail -n1 | xargs)
+
+newUrl=$(echo $request | grep -m 1 -Eo 'https://drivers.amd.com/drivers/amd_chipset_software[^\"]+' | head -1)
+newReleaseDate=$(echo $request | grep -oP '<time(?:\s[^>]*)?>\K.*?(?=</time>)' | head -1)
 newVersion=$(echo $newUrl | sed 's/.*software_\(.*\).exe.*/\1/')
+
+if [ -z "$newUrl" ]; then
+    echo "Failed to get new download Url"
+    exit 1
+fi
+
+if [ -z "$newReleaseDate" ]; then
+    echo "Failed to get new release date"
+    exit 1
+fi
+
+if [ -z "$newVersion" ]; then
+    echo "Failed to get new version"
+    exit 1
+fi
 
 IFS='/\' read month day year <<< $newReleaseDate
 newReleaseDate="$year.$month.$day"
