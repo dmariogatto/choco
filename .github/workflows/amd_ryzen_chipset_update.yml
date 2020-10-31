@@ -19,7 +19,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
         with:
-          ref: amd-ryzen-chipset-test
+          ref: amd-ryzen-chipset
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
@@ -44,4 +44,4 @@ jobs:
           git commit -am "update ryzen chipset '$newVersion'"
           git push
           
-          gh pr create --base amd-ryzen-chipset --title "Update AMD Ryzen Chipset $newVersion" --body "Why did we teach sand to think?"
+          gh pr create --base master --title "Update AMD Ryzen Chipset $newVersion" --body "Why did we teach sand to think?"
