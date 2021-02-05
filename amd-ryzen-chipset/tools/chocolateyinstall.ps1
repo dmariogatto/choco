@@ -9,8 +9,8 @@ if (!$procName.Contains('Ryzen')) {
 else {
     $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-    $url = 'https://drivers.amd.com/drivers/amd_chipset_software_2.10.13.408.exe'
-    $checksum = 'f53ab2b3d8d8e2c8f6a50ff2c921304125b9b8ee7eedd9db27dd4d1a56687db7'
+    $url = 'https://drivers.amd.com/drivers/amd_chipset_software_2.13.27.501.exe'
+    $checksum = '9192ca6b5def85df0e70a6f72d35ffb6a51b9d4b7a98f538fb936ad9d699fc5b'
     $filePath = "$toolsDir\amd-chipset-drivers.exe"
 
     $downloadArgs = @{
@@ -29,6 +29,6 @@ else {
 
     Get-ChocolateyWebFile @downloadArgs
 
-    Start-Process -FilePath "$env:comspec" -ArgumentList "/c START /WAIT `"`" `"$filePath`" /S" -NoNewWindow -Wait
-    New-Item -Path "$filePath.ignore" -ItemType File
+    Start-Process -FilePath "$filePath" -ArgumentList "/S" -Wait
+    New-Item -Path "$filePath.ignore" -ItemType File -Force -ErrorAction SilentlyContinue
 }
