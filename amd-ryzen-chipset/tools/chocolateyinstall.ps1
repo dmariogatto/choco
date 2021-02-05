@@ -29,6 +29,6 @@ else {
 
     Get-ChocolateyWebFile @downloadArgs
 
-    Start-Process -FilePath "$env:comspec" -ArgumentList "/c START /WAIT `"`" `"$filePath`" /S" -NoNewWindow -Wait
-    New-Item -Path "$filePath.ignore" -ItemType File
+    Start-Process -FilePath "$filePath" -ArgumentList "/S" -Wait
+    New-Item -Path "$filePath.ignore" -ItemType File -Force -ErrorAction SilentlyContinue
 }

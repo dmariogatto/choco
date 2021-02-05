@@ -8,12 +8,12 @@ if (!$procName.Contains('Ryzen')) {
 else {
     $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-    $checksum = 'E10649A1844D1B1BAF2B0C58BEDBC033AD817EC9F68FD5322AB793D6E855718D'
+    $checksum = '9192ca6b5def85df0e70a6f72d35ffb6a51b9d4b7a98f538fb936ad9d699fc5b'
     $filePath = "$toolsDir\amd-chipset-drivers.exe"
 
     Get-ChecksumValid -File $filePath -Checksum $checksum -ChecksumType 'sha256'
 
-    Start-Process -FilePath "$env:comspec" -ArgumentList "/c START /WAIT `"`" `"$filePath`" /S /EXPRESSUNINSTALL=1" -NoNewWindow -Wait
+    Start-Process -FilePath "$filePath" -ArgumentList "/S /EXPRESSUNINSTALL=1" -Wait
 
     Remove-Item $filePath -Force -ErrorAction SilentlyContinue
     Remove-Item "$filePath.ignore" -Recurse -Force -ErrorAction SilentlyContinue

@@ -6,6 +6,7 @@ MONTHS=(ZERO January February March April May June July August September October
 
 baseDir=$1
 installScript="$baseDir/tools/chocolateyinstall.ps1"
+uninstallScript="$baseDir/tools/chocolateyuninstall.ps1"
 nuspec="$baseDir/amd-ryzen-chipset.nuspec"
 
 currentUrl=$(grep '$url =' $installScript | cut -d \' -f 2)
@@ -63,6 +64,9 @@ echo "New Checksum: $newChecksum"
 echo "Updating $installScript"
 sed -i "s#$currentUrl#$newUrl#g" $installScript
 sed -i "s#$currentChecksum#$newChecksum#g" $installScript
+
+echo "Updating $uninstallScript"
+sed -i "s#$currentChecksum#$newChecksum#g" $uninstallScript
 
 echo "Updating $nuspec"
 sed -r -i "s#<version>(.*?)</version>#<version>$newReleaseDate</version>#g" $nuspec
