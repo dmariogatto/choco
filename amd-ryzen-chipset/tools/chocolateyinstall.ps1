@@ -1,7 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
 
 $procName = (Get-WmiObject Win32_Processor).Name
-
 if (!$procName.Contains('Ryzen')) {
     Write-Warning 'Only compatible with AMD Ryzen processors!'
     Write-Error "Processor not supported: $procName"

@@ -9,7 +9,7 @@
     <authors>Advanced Micro Devices Inc</authors>
     <licenseUrl>https://www.amd.com/en/support/eula</licenseUrl>
     <projectUrl>https://www.amd.com/en/products/chipsets-am4</projectUrl>    
-    <iconUrl>https://raw.githubusercontent.com/dmariogatto/choco/master/amd-ryzen-chipset/amd.png</iconUrl>
+    <iconUrl>https://rawcdn.githack.com/dmariogatto/choco/572836ba4ad4b37a05576e52ac17dcb0bce18082/amd-ryzen-chipset/amd.png</iconUrl>
     <packageSourceUrl>https://github.com/dmariogatto/choco/tree/master/amd-ryzen-chipset</packageSourceUrl>
     <docsUrl>https://www.amd.com/en/support/contact</docsUrl>
     <copyright>©2020 Advanced Micro Devices, Inc</copyright>
