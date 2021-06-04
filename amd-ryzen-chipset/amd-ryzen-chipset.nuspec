@@ -4,12 +4,12 @@
   <metadata>
     <id>amd-ryzen-chipset</id>
     <owners>dgatto</owners>
-    <version>2021.2.4</version>
+    <version>2021.6.2</version>
     <title>AMD Ryzen Chipset Drivers</title>
     <authors>Advanced Micro Devices Inc</authors>
     <licenseUrl>https://www.amd.com/en/support/eula</licenseUrl>
     <projectUrl>https://www.amd.com/en/products/chipsets-am4</projectUrl>    
-    <iconUrl>https://raw.githubusercontent.com/dmariogatto/choco/master/amd-ryzen-chipset/amd.png</iconUrl>
+    <iconUrl>https://rawcdn.githack.com/dmariogatto/choco/572836ba4ad4b37a05576e52ac17dcb0bce18082/amd-ryzen-chipset/amd.png</iconUrl>
     <packageSourceUrl>https://github.com/dmariogatto/choco/tree/master/amd-ryzen-chipset</packageSourceUrl>
     <docsUrl>https://www.amd.com/en/support/contact</docsUrl>
     <copyright>©2020 Advanced Micro Devices, Inc</copyright>
@@ -18,11 +18,12 @@
 AMD Ryzen™ chipset drivers for both socket AM4 and TR4.
     </summary>
     <description>
-Revision Number: **2.13.27.501**
-Release Date: 4 February 2021
+Revision Number: **2.17.25.506**
+Release Date: 2 June 2021
 
 **Supports:**
 
+- AMD Ryzen™ Threadripper™ PRO Processor
 - AMD Ryzen™ 5000 Series Desktop Processor
 - 3rd Gen AMD Ryzen™ Threadripper™ Processors
 - 3rd Gen AMD Ryzen™ Desktop Processor
@@ -43,13 +44,14 @@ Release Date: 4 February 2021
 - AMD B550 Chipset
 - AMD A520 Chipset
 - AMD TRX40 Chipset
+- AMD WRX80 Chipset
 
 **Package Includes:**
 
 - AMD Chipset Drivers
 - AMD Ryzen™ Power Plans (required for UEFI CPPC2 in Windows® 10 May 2019 Update)
     </description>
-    <releaseNotes>https://www.amd.com/en/support/kb/release-notes/rn-ryzen-chipset-2-13-27-501</releaseNotes>
+    <releaseNotes>https://www.amd.com/en/support/kb/release-notes/rn-ryzen-chipset-2-17-25-506</releaseNotes>
     <dependencies>
       <dependency id="vcredist2015" version="14.0.24212.0" />
       <dependency id="chocolatey-core.extension" version="1.1.0" />
