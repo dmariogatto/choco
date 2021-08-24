@@ -4,7 +4,7 @@
   <metadata>
     <id>amd-ryzen-chipset</id>
     <owners>dgatto</owners>
-    <version>2021.6.2</version>
+    <version>2021.8.23</version>
     <title>AMD Ryzen Chipset Drivers</title>
     <authors>Advanced Micro Devices Inc</authors>
     <licenseUrl>https://www.amd.com/en/support/eula</licenseUrl>
@@ -18,8 +18,8 @@
 AMD Ryzen™ chipset drivers for both socket AM4 and TR4.
     </summary>
     <description>
-Revision Number: **2.17.25.506**
-Release Date: 2 June 2021
+Revision Number: **https://drivers.amd.com/drivers/amd_chipset_software_win10_3.08.17.735.zip**
+Release Date: 23 August 2021
 
 **Supports:**
 
