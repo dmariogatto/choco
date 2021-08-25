@@ -20,7 +20,13 @@ echo "Current Checksum: $currentChecksum"
 request=$(curl -s 'https://www.amd.com/en/support/chipsets/amd-socket-am4/b450' -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:82.0) Gecko/20100101 Firefox/82.0')
 newUrl=$(echo $request | grep -m 1 -iEo 'https://drivers.amd.com/drivers/amd_chipset_software[^\"]+' | head -1)
 newReleaseDate=$(echo $request | grep -oP '<time(?:\s[^>]*)?>\K.*?(?=</time>)' | head -1)
-newVersion=$(echo $newUrl | sed 's/.*_\(.*\).exe.*/\1/')
+newVersion=""
+
+if grep -q "$newUrl" <<< ".exe"; then
+    newVersion=$(echo $newUrl | sed 's/.*_\(.*\).exe.*/\1/')
+elif grep -q "$newUrl" <<< ".zip"; then
+    newVersion=$(echo $newUrl | sed 's/.*_\(.*\).zip.*/\1/')
+fi
 
 if [ -z "$newUrl" ]; then
     echo "Failed to get new download Url"
@@ -52,7 +58,7 @@ fi
 echo "Version update required"
 echo "Downloading $newUrl"
 
-fileName="$baseDir/amd-chipset-drivers.exe"
+fileName="$baseDir/amd_chipset_drivers.file"
 curl $newUrl -o $fileName -H 'Referer: https://www.amd.com/en/support/chipsets/amd-socket-am4/b450'
 
 newChecksum=($(sha256sum $fileName))

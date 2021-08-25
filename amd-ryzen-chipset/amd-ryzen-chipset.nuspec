@@ -12,13 +12,13 @@
     <iconUrl>https://rawcdn.githack.com/dmariogatto/choco/572836ba4ad4b37a05576e52ac17dcb0bce18082/amd-ryzen-chipset/amd.png</iconUrl>
     <packageSourceUrl>https://github.com/dmariogatto/choco/tree/master/amd-ryzen-chipset</packageSourceUrl>
     <docsUrl>https://www.amd.com/en/support/contact</docsUrl>
-    <copyright>©2020 Advanced Micro Devices, Inc</copyright>
+    <copyright>©2021 Advanced Micro Devices, Inc</copyright>
     <tags>amd ryzen threadripper chipset am4 tr4 trx4 a320 b350 b450 x370 x470 x399 x570</tags>
     <summary>
 AMD Ryzen™ chipset drivers for both socket AM4 and TR4.
     </summary>
     <description>
-Revision Number: **https://drivers.amd.com/drivers/amd_chipset_software_win10_3.08.17.735.zip**
+Revision Number: **3.08.17.735**
 Release Date: 23 August 2021
 
 **Supports:**
@@ -51,7 +51,7 @@ Release Date: 23 August 2021
 - AMD Chipset Drivers
 - AMD Ryzen™ Power Plans (required for UEFI CPPC2 in Windows® 10 May 2019 Update)
     </description>
-    <releaseNotes>https://www.amd.com/en/support/kb/release-notes/rn-ryzen-chipset-2-17-25-506</releaseNotes>
+    <releaseNotes>https://www.amd.com/en/support/kb/release-notes/rn-ryzen-chipset-3-08-17-735</releaseNotes>
     <dependencies>
       <dependency id="vcredist2015" version="14.0.24212.0" />
       <dependency id="chocolatey-core.extension" version="1.1.0" />
