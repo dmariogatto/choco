@@ -22,9 +22,9 @@ newUrl=$(echo $request | grep -m 1 -iEo 'https://drivers.amd.com/drivers/amd_chi
 newReleaseDate=$(echo $request | grep -oP '<time(?:\s[^>]*)?>\K.*?(?=</time>)' | head -1)
 newVersion=""
 
-if grep -q "$newUrl" <<< ".exe"; then
+if [[ "$newUrl" == *'.exe'* ]]; then
     newVersion=$(echo $newUrl | sed 's/.*_\(.*\).exe.*/\1/')
-elif grep -q "$newUrl" <<< ".zip"; then
+elif [[ "$newUrl" == *'.zip'* ]]; then
     newVersion=$(echo $newUrl | sed 's/.*_\(.*\).zip.*/\1/')
 fi
 
