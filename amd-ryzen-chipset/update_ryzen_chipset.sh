@@ -23,8 +23,10 @@ newReleaseDate=$(echo $request | grep -oP '<time(?:\s[^>]*)?>\K.*?(?=</time>)' |
 newVersion=""
 
 if [[ "$newUrl" == *'.exe'* ]]; then
+    echo "Is exe"
     newVersion=$(echo $newUrl | sed 's/.*_\(.*\).exe.*/\1/')
 elif [[ "$newUrl" == *'.zip'* ]]; then
+    echo "Is zip"
     newVersion=$(echo $newUrl | sed 's/.*_\(.*\).zip.*/\1/')
 fi
 
