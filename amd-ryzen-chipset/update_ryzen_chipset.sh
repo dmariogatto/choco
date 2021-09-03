@@ -13,12 +13,10 @@ currentUrl=$(grep '$url =' $installScript | cut -d \' -f 2)
 currentChecksum=$(grep '$checksum =' $installScript | cut -d \' -f 2)
 currentVersion=""
 
-if [[ "$newUrl" == *'.exe'* ]]; then
-    echo "Is exe"
+if [[ "$currentUrl" == *'.exe'* ]]; then
     currentVersion=$(echo $currentUrl | sed 's/.*_\(.*\).exe.*/\1/')
-elif [[ "$newUrl" == *'.zip'* ]]; then
-    echo "Is zip"
-    newVersion=$(echo $currentUrl | sed 's/.*_\(.*\).zip.*/\1/')
+elif [[ "$currentUrl" == *'.zip'* ]]; then
+    currentVersion=$(echo $currentUrl | sed 's/.*_\(.*\).zip.*/\1/')
 fi
 
 echo "Current Url: $currentUrl"
