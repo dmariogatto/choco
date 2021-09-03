@@ -10,8 +10,16 @@ uninstallScript="$baseDir/tools/chocolateyuninstall.ps1"
 nuspec="$baseDir/amd-ryzen-chipset.nuspec"
 
 currentUrl=$(grep '$url =' $installScript | cut -d \' -f 2)
-currentVersion=$(echo $currentUrl | sed 's/.*software_\(.*\).exe.*/\1/')
 currentChecksum=$(grep '$checksum =' $installScript | cut -d \' -f 2)
+currentVersion=""
+
+if [[ "$newUrl" == *'.exe'* ]]; then
+    echo "Is exe"
+    currentVersion=$(echo $currentUrl | sed 's/.*_\(.*\).exe.*/\1/')
+elif [[ "$newUrl" == *'.zip'* ]]; then
+    echo "Is zip"
+    newVersion=$(echo $currentUrl | sed 's/.*_\(.*\).zip.*/\1/')
+fi
 
 echo "Current Url: $currentUrl"
 echo "Current Version: $currentVersion"
