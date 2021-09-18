@@ -39,7 +39,13 @@ jobs:
           
           installScript="$GITHUB_WORKSPACE/amd-ryzen-chipset/tools/chocolateyinstall.ps1"
           newUrl=$(grep '$url =' $installScript | cut -d \' -f 2)
-          newVersion=$(echo $newUrl | sed 's/.*software_\(.*\).exe.*/\1/')
+          newVersion=""
+
+          if [[ "$newUrl" == *'.exe'* ]]; then
+              newVersion=$(echo $newUrl | sed 's/.*_\(.*\).exe.*/\1/')
+          elif [[ "$newUrl" == *'.zip'* ]]; then
+              newVersion=$(echo $newUrl | sed 's/.*_\(.*\).zip.*/\1/')
+          fi
           
           git commit -am "update ryzen chipset '$newVersion'"
           git push
