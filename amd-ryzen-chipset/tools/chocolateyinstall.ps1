@@ -8,8 +8,8 @@ if (!$procName.Contains('Ryzen')) {
 else {
     $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-    $url = 'https://drivers.amd.com/drivers/amd_chipset_software_win10_3.08.17.735.zip'
-    $checksum = '8ccb49cd82d8ae4d421224b0bba3769b161603fd0bd6edec3cd9072c321424a7'    
+    $url = 'https://drivers.amd.com/drivers/amd_chipset_software_3.09.01.140.zip'
+    $checksum = 'fc25b7c630c1eb803dd3ba8b9aa7ab9a19cc4e1703d92bf855c56d753f7143f4'    
     $zipPath = "$toolsDir\amd_chipset_drivers.zip"
     
     $downloadArgs = @{
