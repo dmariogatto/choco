@@ -8,7 +8,7 @@ if (!$procName.Contains('Ryzen')) {
 else {
     $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-    $checksum = 'fc25b7c630c1eb803dd3ba8b9aa7ab9a19cc4e1703d92bf855c56d753f7143f4'
+    $checksum = '851c0364acd6ec91c54f260729f875de727541b2acb0f5e8930ab51227ce2f53'
     $zipPath = "$toolsDir\amd_chipset_drivers.zip"
 
     Get-ChecksumValid -File $zipPath -Checksum $checksum -ChecksumType 'sha256'
