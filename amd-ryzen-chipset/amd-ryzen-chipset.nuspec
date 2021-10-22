@@ -49,7 +49,8 @@ Release Date: 21 October 2021
 **Package Includes:**
 
 - AMD Chipset Drivers
-- AMD Ryzen™ Power Plans (required for UEFI CPPC2 in Windows® 10 May 2019 Update)
+- AMD Ryzen™ Power Plans (required for UEFI CPPC2 support with "Zen+" and "Zen 2" in Windows® 11)
+- AMD Ryzen™ Power Provisioning Package (required for UEFI CPPC2 support with "Zen 3" and later in Windows® 11)
     </description>
     <releaseNotes>https://www.amd.com/en/support/kb/release-notes/rn-ryzen-chipset-3-10-08-506</releaseNotes>
     <dependencies>
