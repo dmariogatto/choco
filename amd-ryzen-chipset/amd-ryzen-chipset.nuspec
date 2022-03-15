@@ -4,7 +4,7 @@
   <metadata>
     <id>amd-ryzen-chipset</id>
     <owners>dgatto</owners>
-    <version>2021.10.21</version>
+    <version>2022.3.14</version>
     <title>AMD Ryzen Chipset Drivers</title>
     <authors>Advanced Micro Devices Inc</authors>
     <licenseUrl>https://www.amd.com/en/support/eula</licenseUrl>
@@ -12,14 +12,14 @@
     <iconUrl>https://rawcdn.githack.com/dmariogatto/choco/572836ba4ad4b37a05576e52ac17dcb0bce18082/amd-ryzen-chipset/amd.png</iconUrl>
     <packageSourceUrl>https://github.com/dmariogatto/choco/tree/master/amd-ryzen-chipset</packageSourceUrl>
     <docsUrl>https://www.amd.com/en/support/contact</docsUrl>
-    <copyright>©2021 Advanced Micro Devices, Inc</copyright>
+    <copyright>©2022 Advanced Micro Devices, Inc</copyright>
     <tags>amd ryzen threadripper chipset am4 tr4 trx4 b350 a320 x370 x399 b450 x470 x570 b550 a520 trx40 wrx80</tags>
     <summary>
 AMD Ryzen™ chipset drivers for both socket AM4 and TR4.
     </summary>
     <description>
-Revision Number: **3.10.08.506**
-Release Date: 21 October 2021
+Revision Number: **4.03.03.431**
+Release Date: 14 March 2022
 
 **Supports:**
 
@@ -49,10 +49,11 @@ Release Date: 21 October 2021
 **Package Includes:**
 
 - AMD Chipset Drivers
-- AMD Ryzen™ Power Plans (required for UEFI CPPC2 support with "Zen+" and "Zen 2" in Windows® 11)
+- AMD Ryzen™ Power Plans (required for UEFI CPPC2 in Windows® 11)
 - AMD Ryzen™ Power Provisioning Package (required for UEFI CPPC2 support with "Zen 3" and later in Windows® 11)
+- AMD Ryzen™ Power Plans (required for UEFI CPPC2 in Windows® 10 May 2019 Update)
     </description>
-    <releaseNotes>https://www.amd.com/en/support/kb/release-notes/rn-ryzen-chipset-3-10-08-506</releaseNotes>
+    <releaseNotes>https://www.amd.com/en/support/kb/release-notes/rn-ryzen-chipset-4-03-03-431</releaseNotes>
     <dependencies>
       <dependency id="vcredist2015" version="14.0.24212.0" />
       <dependency id="chocolatey-core.extension" version="1.1.0" />
