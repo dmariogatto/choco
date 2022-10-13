@@ -4,7 +4,7 @@
   <metadata>
     <id>amd-ryzen-chipset</id>
     <owners>dgatto</owners>
-    <version>2022.8.25</version>
+    <version>2022.10.12</version>
     <title>AMD Ryzen Chipset Drivers</title>
     <authors>Advanced Micro Devices Inc</authors>
     <licenseUrl>https://www.amd.com/en/support/eula</licenseUrl>
@@ -13,17 +13,18 @@
     <packageSourceUrl>https://github.com/dmariogatto/choco/tree/master/amd-ryzen-chipset</packageSourceUrl>
     <docsUrl>https://www.amd.com/en/support/contact</docsUrl>
     <copyright>©2022 Advanced Micro Devices, Inc</copyright>
-    <tags>amd ryzen threadripper chipset am4 tr4 trx4 b350 a320 x370 x399 b450 x470 x570 b550 a520 trx40 wrx80</tags>
+    <tags>amd ryzen threadripper chipset am4 am5 tr4 trx4 x670 x670e b650 b650e b350 a320 x370 x399 b450 x470 x570 b550 a520 trx40 wrx80</tags>
     <summary>
 AMD Ryzen™ chipset drivers for both socket AM4 and TR4.
     </summary>
     <description>
-Revision Number: **4.08.09.2337**
-Release Date: **25 August 2022**
+Revision Number: **4.09.23.507**
+Release Date: **12 October 2022**
 
 **Supports:**
 
 - AMD Ryzen™ Threadripper™ PRO Processor
+- AMD Ryzen™ 7000 Series Desktop Processors
 - AMD Ryzen™ 5000 Series Desktop Processor
 - 3rd Gen AMD Ryzen™ Threadripper™ Processors
 - 3rd Gen AMD Ryzen™ Desktop Processor
@@ -34,6 +35,8 @@ Release Date: **25 August 2022**
 - AMD Ryzen™ Desktop Processor with Radeon™ Graphics
 - AMD Ryzen™ Mobile Processor with Radeon™ Graphics
 - 7th-Gen AMD A-Series Processors
+- AMD X670E/X670 Chipset
+- AMD B650E/B650 Chipset
 - AMD B350 Chipset
 - AMD A320 Chipset
 - AMD X370 Chipset
@@ -53,7 +56,7 @@ Release Date: **25 August 2022**
 - AMD Ryzen™ Power Provisioning Package (required for UEFI CPPC2 support with "Zen 3" and later in Windows® 11)
 - AMD Ryzen™ Power Plans (required for UEFI CPPC2 in Windows® 10 May 2019 Update)
     </description>
-    <releaseNotes>https://www.amd.com/en/support/kb/release-notes/rn-ryzen-chipset-4-08-09-2337</releaseNotes>
+    <releaseNotes>https://www.amd.com/en/support/kb/release-notes/rn-ryzen-chipset-4-09-23-507</releaseNotes>
     <dependencies>
       <dependency id="vcredist2015" version="14.0.24212.0" />
       <dependency id="chocolatey-core.extension" version="1.1.0" />
