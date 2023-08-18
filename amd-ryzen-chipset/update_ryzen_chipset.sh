@@ -82,7 +82,7 @@ echo "Updating $uninstallScript"
 sed -i "s#$currentChecksum#$newChecksum#g" $uninstallScript
 
 echo "Updating $nuspec"
-sed -r -i "s#<version>(.*?)</version>#<version>$newReleaseDate</version>#g" $nuspec
+sed -r -i "s#<version>.*</version>#<version>$newReleaseDate</version>#g" $nuspec
 sed -i "s#^Revision Number:.*#Revision Number: **$newVersion**#g" $nuspec
 sed -i "s#^Release Date:.*#Release Date: **$day ${MONTHS[$month]} $year**#g" $nuspec
 sed -i "s#${currentVersion//./-}#${newVersion//./-}#g" $nuspec
