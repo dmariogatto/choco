@@ -4,7 +4,7 @@
   <metadata>
     <id>amd-ryzen-chipset</id>
     <owners>dgatto</owners>
-    <version>2024.06.11</version>
+    <version>2024.6.11</version>
     <title>AMD Ryzen Chipset Drivers</title>
     <authors>Advanced Micro Devices Inc</authors>
     <licenseUrl>https://www.amd.com/en/support/eula</licenseUrl>
@@ -60,7 +60,7 @@ Release Date: **11 June 2024**
 - AMD Chipset Drivers
 - AMD Ryzen™ Power Plans (required for UEFI CPPC2 in Windows® 10 May 2019 Update)
     </description>
-    <releaseNotes>https://www.amd.com/en/support/kb/release-notes/rn-ryzen-chipset-6-05-28-016</releaseNotes>
+    <releaseNotes>https://www.amd.com/en/resources/support-articles/release-notes/RN-RYZEN-CHIPSET-6-05-28-016.html</releaseNotes>
     <dependencies>
       <dependency id="vcredist140" version="14.29.30133" />
       <dependency id="chocolatey-core.extension" version="1.1.0" />
