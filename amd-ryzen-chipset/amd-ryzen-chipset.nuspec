@@ -12,7 +12,7 @@
     <iconUrl>https://rawcdn.githack.com/dmariogatto/choco/572836ba4ad4b37a05576e52ac17dcb0bce18082/amd-ryzen-chipset/amd.png</iconUrl>
     <packageSourceUrl>https://github.com/dmariogatto/choco/tree/master/amd-ryzen-chipset</packageSourceUrl>
     <docsUrl>https://www.amd.com/en/support/contact</docsUrl>
-    <copyright>©2024 Advanced Micro Devices, Inc</copyright>
+    <copyright>©2025 Advanced Micro Devices, Inc</copyright>
     <tags>amd ryzen threadripper chipset am4 am5 tr4 trx4 x870 x870e x670 x670e b650 b650e b350 a320 x370 x399 b450 x470 x570 b550 a520 a620 trx40 trx50 wrx80 wrx90</tags>
     <summary>
 AMD Ryzen™ chipset drivers for both socket AM4, AM5 and TR4.
@@ -23,10 +23,12 @@ Release Date: **25 February 2025**
 
 **Supports:**
 
-- MD Ryzen™ AI 300 Series
+- AMD Ryzen™ AI 300 Series
 - AMD Ryzen™ Threadripper™ PRO Processor
+- AMD Ryzen™ 7 9800X3D Processor
 - AMD Ryzen™ 9000 Series Desktop Processors
-- AMD Ryzen™ 8000 Series Desktop Processors
+- AMD Ryzen™ 8000G Series Desktop Processors
+- AMD Ryzen™ 8X40 Series processors 
 - AMD Ryzen™ 7040 Series Desktop Processors
 - AMD Ryzen™ 7000 Series Desktop Processors
 - AMD Ryzen™ 7000 Series Mobile Processors
@@ -63,7 +65,7 @@ Release Date: **25 February 2025**
 - AMD Chipset Drivers
 - AMD Ryzen™ Power Plans (required for UEFI CPPC2 in Windows® 10 May 2019 Update)
     </description>
-    <releaseNotes>https://www.amd.com/en/resources/support-articles/release-notes/RN-RYZEN-CHIPSET-7-02-13-148.html</releaseNotes>
+    <releaseNotes>https://www.amd.com/en/resources/support-articles/release-notes/RN-RYZEN-CHIPSET-6-10-17-152/RN-RYZEN-CHIPSET-7-02-13-148.html</releaseNotes>
     <dependencies>
       <dependency id="vcredist140" version="14.29.30133" />
       <dependency id="chocolatey-core.extension" version="1.1.0" />
