@@ -4,7 +4,7 @@
   <metadata>
     <id>amd-ryzen-chipset</id>
     <owners>dgatto</owners>
-    <version>2025.02.25</version>
+    <version>2025.04.22</version>
     <title>AMD Ryzen Chipset Drivers</title>
     <authors>Advanced Micro Devices Inc</authors>
     <licenseUrl>https://www.amd.com/en/support/eula</licenseUrl>
@@ -18,8 +18,8 @@
 AMD Ryzen™ chipset drivers for both socket AM4, AM5 and TR4.
     </summary>
     <description>
-Revision Number: **7.02.13.148**
-Release Date: **25 February 2025**
+Revision Number: **7.04.09.545**
+Release Date: **22 April 2025**
 
 **Supports:**
 
@@ -65,7 +65,7 @@ Release Date: **25 February 2025**
 - AMD Chipset Drivers
 - AMD Ryzen™ Power Plans (required for UEFI CPPC2 in Windows® 10 May 2019 Update)
     </description>
-    <releaseNotes>https://www.amd.com/en/resources/support-articles/release-notes/RN-RYZEN-CHIPSET-6-10-17-152/RN-RYZEN-CHIPSET-7-02-13-148.html</releaseNotes>
+    <releaseNotes>https://www.amd.com/en/resources/support-articles/release-notes/RN-RYZEN-CHIPSET-7-04-09-545.html#</releaseNotes>
     <dependencies>
       <dependency id="vcredist140" version="14.29.30133" />
       <dependency id="chocolatey-core.extension" version="1.1.0" />
