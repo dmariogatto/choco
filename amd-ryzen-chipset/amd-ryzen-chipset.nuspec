@@ -8,7 +8,7 @@
     <title>AMD Ryzen Chipset Drivers</title>
     <authors>Advanced Micro Devices Inc</authors>
     <licenseUrl>https://www.amd.com/en/support/eula</licenseUrl>
-    <projectUrl>hhttps://www.amd.com/en/products/processors/chipsets.html</projectUrl>    
+    <projectUrl>https://www.amd.com/en/products/processors/chipsets.html</projectUrl>    
     <iconUrl>https://rawcdn.githack.com/dmariogatto/choco/572836ba4ad4b37a05576e52ac17dcb0bce18082/amd-ryzen-chipset/amd.png</iconUrl>
     <packageSourceUrl>https://github.com/dmariogatto/choco/tree/master/amd-ryzen-chipset</packageSourceUrl>
     <docsUrl>https://www.amd.com/en/support/contact</docsUrl>
