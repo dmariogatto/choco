@@ -11,7 +11,7 @@ else {
     $installerFilePath = "$toolsDir\$installerFileName"
     $unzipDir = "$toolsDir\amd_chipset_drivers"
 
-    $checksum = '1acd6dadcc3b4bca9451ff170d7a5a049309b827f74cf54b2a3684bf16a34856'
+    $checksum = 'ac9c4c4c17b024a724be815f3ad1cf6780efece6ddc73d8651e58b1b0497cf98'
 
     $downloadFilePath = $installerFilePath
     if (!(Test-Path $downloadFilePath)) {
