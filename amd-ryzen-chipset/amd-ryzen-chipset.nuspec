@@ -4,7 +4,7 @@
   <metadata>
     <id>amd-ryzen-chipset</id>
     <owners>dgatto</owners>
-    <version> 2026.03.09 </version>
+    <version>2026.03.09</version>
     <title>AMD Ryzen Chipset Drivers</title>
     <authors>Advanced Micro Devices Inc</authors>
     <licenseUrl>https://www.amd.com/en/resources/support-articles/amd-software-eula.html</licenseUrl>
@@ -19,7 +19,7 @@ AMD Ryzen™ chipset drivers for both socket AM4, AM5 and TR4.
     </summary>
     <description>
 Revision Number: **8.02.18.557**
-Release Date: **09  March  2026**
+Release Date: **09 March 2026**
 
 **Supports:**
 
