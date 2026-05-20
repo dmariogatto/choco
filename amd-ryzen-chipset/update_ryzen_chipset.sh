@@ -24,8 +24,8 @@ echo "Current Version: $currentVersion"
 echo "Current Checksum: $currentChecksum"
 
 request=$(curl -s 'https://www.amd.com/en/support/downloads/drivers.html/chipsets/am4/b450.html' -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:82.0) Gecko/20100101 Firefox/82.0')
-newUrl=$(echo $request | grep -m 1 -iEo 'https://drivers.amd.com/drivers/amd_chipset_software[^\"]+' | head -1)
-newReleaseDate=$(echo $request | grep -oP 'Release Date<\/strong>\s*\K<p(?:\s[^>]*)?>\K.*?(?=</p>)' | head -1)
+newUrl=$(echo $request | grep -m 1 -iEo 'https://drivers.amd.com/drivers/amd_chipset_software[^\"]+' | head -1 | xargs)
+newReleaseDate=$(echo $request | grep -oP 'Release Date<\/strong>\s*\K<p(?:\s[^>]*)?>\K.*?(?=</p>)' | head -1 | xargs)
 newVersion=""
 
 if [[ "$newUrl" == *'.exe'* ]]; then
