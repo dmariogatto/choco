@@ -23,17 +23,28 @@ echo "Current Url: $currentUrl"
 echo "Current Version: $currentVersion"
 echo "Current Checksum: $currentChecksum"
 
-request=$(curl -s 'https://www.amd.com/en/support/downloads/drivers.html/chipsets/am4/b450.html' -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:82.0) Gecko/20100101 Firefox/82.0')
-newUrl=$(echo $request | grep -m 1 -iEo 'https://drivers.amd.com/drivers/amd_chipset_software[^\"]+' | head -1 | xargs)
-newReleaseDate=$(echo $request | grep -oP 'Release Date<\/strong>\s*\K<p(?:\s[^>]*)?>\K.*?(?=</p>)' | head -1 | xargs)
-newVersion=""
+request=$(curl -s 'https://www.amd.com/en/support/downloads/drivers.html/chipsets/am4/b450.html' \
+    -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:82.0) Gecko/20100101 Firefox/82.0')
+
+chipsetBlock=$(echo $request | grep -iA15 "Chipset Drivers")
+
+newUrl=$(echo $chipsetBlock \
+    | grep -m 1 -iEo 'https://drivers.amd.com/drivers/[^\"]+(exe|zip)' \
+    | head -1 \
+    | xargs)
+newReleaseDate=$(echo $chipsetBlock \
+    | grep -oP 'Release Date<\/strong>\s*\K<p(?:\s[^>]*)?>\K.*?(?=</p>)' \
+    | head -1 \
+    | xargs)
+newVersion=$(echo $chipsetBlock \
+    | grep -m 1 -oP 'Revision Number<\/strong>\s*\K<p(?:\s[^>]*)?>\K.*?(?=</p>)' \
+    | head -1 \
+    | xargs)
 
 if [[ "$newUrl" == *'.exe'* ]]; then
     echo "Is exe"
-    newVersion=$(echo $newUrl | sed 's/.*_\(.*\).exe.*/\1/')
 elif [[ "$newUrl" == *'.zip'* ]]; then
     echo "Is zip"
-    newVersion=$(echo $newUrl | sed 's/.*_\(.*\).zip.*/\1/')
 fi
 
 if [ -z "$newUrl" ]; then
