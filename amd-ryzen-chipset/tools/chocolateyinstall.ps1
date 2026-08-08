@@ -11,8 +11,8 @@ else {
     $installerFilePath = "$toolsDir\$installerFileName"
     $unzipDir = "$toolsDir\amd_chipset_drivers"
 
-    $url = 'https://drivers.amd.com/drivers/amd_chipset_software_8.05.04.516.exe'
-    $checksum = '1609fbf1375ca1f25e461d1de7d21da096d018624d8b63dfc3d81cb6a8bde3ad'
+    $url = 'https://drivers.amd.com/drivers/amd_software_8.07.16.1035.exe'
+    $checksum = '1b55dd2dd661d19c5ea4d49bd53b673783e673db9e427b709d404bb1bae66bdb'
 
     $downloadFilePath = $installerFilePath
 
